@@ -106,7 +106,8 @@ Step 6: git push origin docs
  git config --global --add merge.tool kdiff3
   git config --global --add mergetool.kdiff3.path /user/bin/kdiff3
 git config --global --add mergetool.trustExitCode false
-
+or
+git mergetool --tool=vimdiff3
 or
 
 sudo apt install vim
@@ -120,6 +121,13 @@ sudo nano ~/.gitconfig
         tool = vim
 
 tool=vim
+
+or
+
+git config --global diff.tool p4merge
+git config --global difftool.p4merge.path "E:\software\A08\file\p4vinst64.exe"
+#to see global git configuration file
+git config --list --show-origin --show-scope
 
 git mergetool
 
