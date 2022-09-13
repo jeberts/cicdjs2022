@@ -1,6 +1,10 @@
-sudo apt-get install git
+Step1: To install git software in Ubuntu
 
+sudo apt-get install git
+        or
 sudo yum install git
+
+Step2: Configure git in CLI
 
 git config --global user.email "youremail@emaildomain.com"
 
@@ -8,16 +12,22 @@ git config --global user.name "your username"
 
  git config -l
  
- git init projectname
+ Step3: Initialize git before creating local repository
  
- cd projectname 
+ md projectname
  
+ cd projectname
+ 
+ git init 
+  
  touch helloworld.c
   
  git add .
  
  
  git commit -m "First commit of project, just an empty file"
+ 
+ //adding specific file instead of all the files
  
  git add helloworld.c
  
@@ -27,7 +37,13 @@ git config --global user.name "your username"
 
  git commit -m "initial commit"
  
+ Step 4: Setup the remote repository  
  git remote add origin https://gitlab.com/Parameswari/gitecommrepo.git
+ git pull origin master
+ 
+ Incase you have files from multiple local reposiory 
+ 
+ git pull origin master --allow-unrelated-histories
  
  git push --force origin master
  ==============================
@@ -42,31 +58,32 @@ git config --global user.name "your username"
  
  git push
  
- create branch
+ Steps to create branch
  
- git branch docs #create branch
+ Step 1: git branch docs #create branch
   
- git branch  #list branch
+ Step 2: git branch  #list branch
+ 
+ 
+ Step 3: git checkout docs
+ 
+ Step 4: git add .
+ 
+ Step 5: git commit -m "updated'
+ 
+Step 6: git push origin docs
+ 
+ Step 7: git switch master
+ 
+ Step8: git ls-files
+ 
+ Step 9: git merge docs
+ 
+ Step 10: git push origin master 
  
  git branch -d docs  #delete branch
  
  git branch -m <old_name> <new_name> #rename branch
- 
- git checkout docs
- 
- git add .
- 
- git commit -m "updated'
- 
- git push origin docs
- 
- git checkout master
- 
- git ls-files
- 
- git merge docs
- 
- git push origin master
  
  #conflicts
  git init user1
