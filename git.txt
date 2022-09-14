@@ -135,3 +135,40 @@ select the required code
 
 git commit -m "conclusion message"
 git push origin master
+
+#rebase
+
+1. git clone  https://github.com/eswaribala/trainingsep2022repo.git
+
+2. cd trainingsep2022repo
+
+3. create a.txt and b.txt in master branch and commit
+
+4. git branch feature
+6. git checkout feature
+7. git ls-files
+
+8. git switch master
+9. git branch
+10. create c.txt and commit in master
+11. git switch featue
+12. git branch
+13. Modify a.txt and b.txt and commit
+14. git switch master
+15. git log
+16. git switch feature
+17. git log
+18. git rebase master
+19. git switch master
+20 git merge feature
+
+
+
+
+
+
+
+
+
+
+
