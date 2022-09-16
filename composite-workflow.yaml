@@ -1,0 +1,16 @@
+name: Composite Work FLow
+
+on: [push]
+
+jobs:
+  compoisite_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - uses: actions/checkout@v3
+      - id: foo
+        users: jeberts/cicdjs2022@v2
+        with:
+         who-togreet: 'Mona the Octocat'
+      - run: echo reandom-number ${{ steps.foo.outputs.random-number }}
+          shell: bash
