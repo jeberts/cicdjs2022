@@ -11,6 +11,6 @@ jobs:
       - id: foo
         users: jeberts/cicdjs2022@v2
         with:
-         who-togreet: 'Mona the Octocat'
-      - run: echo reandom-number ${{ steps.foo.outputs.random-number }}
+         who-to-greet: 'Mona the Octocat'
+      - run: echo random-number ${{ steps.foo.outputs.random-number }}
           shell: bash
